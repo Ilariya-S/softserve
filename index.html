@@ -9,20 +9,87 @@
 </head>
 
 <body>
-    <div class="container">
-        <header>
-            <h1>Привіт! Ми — команда SYN</h1>
-            <p>Це наш спільний проєкт для вивчення Git та GitHub. Тут зібрані наші персональні сторінки, які ми робили
-                разом.</p>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="logo" href="index.html">SYN</a>
+            <nav class="nav-links">
+                <a href="index.html">Головна</a>
+                <a href="#team">Команда</a>
+            </nav>
+        </div>
+    </header>
+
+    <div class="page-wrapper">
+        <header class="hero">
+            <div class="hero-content">
+                <p class="eyebrow">Команда SYN</p>
+                <h1>Створюємо цифрові історії разом</h1>
+                <p class="hero-text">
+                    Ми поєднуємо знання, креатив і технології, щоб зробити наше навчання корисним, цікавим і
+                    доступним для кожного.
+                </p>
+                <a class="hero-button" href="#team">Дізнатися більше</a>
+            </div>
         </header>
 
-        <main>
-            <h2>Склад команди:</h2>
-            <ul class="team-list">
-                <li><a href="members/ilariia.html">Іларія</a></li>
-                <li><a href="members/roman.html">Роман</a></li>
-                <li><a href="members/glib.html">Гліб</a></li>
-            </ul>
+        <main class="main-content">
+            <section id="team" class="about-team">
+                <div class="section-header">
+                    <span class="section-label">Про нашу команду</span>
+                    <h2>Ми — команда, яка працює разом</h2>
+                    <p>
+                        Наша мета — навчитися працювати з Git, створювати чисті макети та розвивати особисті сторінки
+                        у дружній команді.
+                    </p>
+                </div>
+
+                <div class="team-cards">
+                    <article class="team-card">
+                        <div class="card-icon">І</div>
+                        <h3>Іларія</h3>
+                        <p>Працює над дизайном і фронтендом, спрямовує команду до сучасних візуальних рішень.</p>
+                        <a href="members/ilariia.html">Перейти на сторінку</a>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="card-icon">Р</div>
+                        <h3>Роман</h3>
+                        <p>Займається логікою, Git та організацією проєкту, щоб усе працювало відповідно до плану.</p>
+                        <a href="members/roman.html">Перейти на сторінку</a>
+                    </article>
+
+                    <article class="team-card">
+                        <div class="card-icon">Г</div>
+                        <h3>Гліб</h3>
+                        <p>Відповідає за структуру, адаптивність та оптимізацію, щоб сайт був швидким і зручним.</p>
+                        <a href="members/glib.html">Перейти на сторінку</a>
+                    </article>
+                </div>
+            </section>
+
+            <section class="info-section">
+                <div class="info-card">
+                    <h2>Про проєкт</h2>
+                    <p>
+                        Цей проєкт створено як частину навчальної роботи для вивчення Git та GitHub. Тут зібрані
+                        персональні сторінки учасників, щоб показати, як працює командна розробка і спільне
+                        редагування.
+                    </p>
+                    <p>
+                        Ми використовуємо сучасний підхід до верстки, стильні картки та приємну кольорову палітру,
+                        щоб зробити результат професійним і зручним у використанні.
+                    </p>
+                </div>
+                <div class="info-card">
+                    <h2>Наші цінності</h2>
+                    <ul>
+                        <li>Співпраця</li>
+                        <li>Якість</li>
+                        <li>Креативність</li>
+                        <li>Навчання</li>
+                    </ul>
+                </div>
+            </section>
         </main>
     </div>
 </body>
