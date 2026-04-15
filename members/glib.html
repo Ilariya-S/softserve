@@ -9,40 +9,63 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="logo" href="../index.html">SYN</a>
+            <nav class="nav-links">
+                <a href="../index.html">Головна</a>
+                <a href="../index.html#team">Команда</a>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Перемикнути тему">🌙</button>
+            </nav>
+        </div>
+    </header>
 
-    <div class="profile-card">
-        <img src="src/glib_avatar.jpg" alt="Моє фото" class="avatar">
+    <main class="page-content">
+        <section class="container profile-card">
+            <div class="profile-intro">
+                <img src="src/photo_glib.jpg" alt="Фото Глібу" class="avatar">
+                <div class="profile-summary">
+                    <p class="eyebrow">Профіль</p>
+                    <h1>Гліб Рубцов</h1>
+                    <p class="role">Студент / Учасник програми SoftServe</p>
+                    <p class="role">НТУ "Дніпровська політехніка"</p>
+                </div>
+            </div>
 
-        <h1>Гліб Рубцов</h1>
-        <p class="role">Студент / Учасник програми SoftServe</p>
-        <p class="role">НТУ "Дніпровська політехніка"</p>
+            <div class="profile-section">
+                <h2>Про мене</h2>
+                <p>
+                    Hello! Я молодий першокурсник, який хоче навчатись чогось нового. Здобуваю освіту за спеціальністю "Інженерія програмного забезпечення" у райському куточку під назвою "Дніпровська політехніка".
+                </p>
+                <p>
+                    Цікавлюся програмуванням, сучасними технологіями, дизайном та люблю розбиратися, як працюють речі «під капотом». Поступово прокачую свої навички, беру участь у навчальних проєктах і намагаюся перетворювати ідеї на реальні застосунки.
+                </p>
+            </div>
 
-        <h2>About me</h2>
-        <p> Hello! Я чіловий першокурсник, який хоче навчатись чогось нового. 
-            Здобуваю освіту за спеціальністю "Інженерія програмного забезпечення" 
-            у райському куточку під назвою "Дніпровська політехніка"  
-        </p>
-        <p> Цікавлюся програмуванням, сучасними технологіями, дизайном та люблю розбиратися, як працюють речі «під капотом».
-             Поступово прокачую свої навички, беру участь 
-            у навчальних проєктах і намагаюся перетворювати ідеї на реальні застосунки.</p>
+            <div class="profile-grid">
+                <article>
+                    <h3>Що я зараз вивчаю</h3>
+                    <ul>
+                        <li>Frontend (JavaScript)</li>
+                        <li>Backend (Python, C#, SQL)</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Мої інтереси</h3>
+                    <ul>
+                        <li>Слухання музики</li>
+                        <li>Ігри</li>
+                        <li>Спорт, особливо хокей</li>
+                        <li>Ловити гав</li>
+                    </ul>
+                </article>
+            </div>
 
-        <h2>What am I learning now?</h2>
-        <ul>
-            <li>Frontend (JavaScript) </li>
-            <li>Backend (Python, C#, SQL)</li>
-        </ul>
-
-        <h2>I am interested in</h2>
-        <ul>
-            <li>Listening to music </li>
-            <li>Gaming</li>
-            <li>Sport, especially hockey</li>
-            <li>Taking a nap</li>
-        </ul>
-
-        <a href="../index.html" class="back-link">⬅ Повернутися до команди</a>
-    </div>
-
+            <a href="../index.html" class="back-link">⬅ Повернутися до команди</a>
+        </section>
+    </main>
+    
+    <script src="../theme-switcher.js"></script>
 </body>
 
 </html>

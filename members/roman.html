@@ -9,37 +9,64 @@
 </head>
 
 <body>
+    <header class="site-header">
+        <div class="navbar">
+            <a class="logo" href="../index.html">SYN</a>
+            <nav class="nav-links">
+                <a href="../index.html">Головна</a>
+                <a href="../index.html#team">Команда</a>
+                <button class="theme-toggle" onclick="toggleTheme()" aria-label="Перемикнути тему">🌙</button>
+            </nav>
+        </div>
+    </header>
 
-    <div class="profile-card">
-        <img src="src/photo_roman.png" alt="Моє фото" class="avatar">
+    <main class="page-content">
+        <section class="container profile-card">
+            <div class="profile-intro">
+                <img src="src/photo_roman.png" alt="Фото Романа" class="avatar">
+                <div class="profile-summary">
+                    <p class="eyebrow">Профіль</p>
+                    <h1>Роман Крошевич</h1>
+                    <p class="role">Студент / Учасник програми SoftServe</p>
+                    <p class="role">НТУ "Дніпровська політехніка"</p>
+                </div>
+            </div>
 
-        <h1>Роман Крошевич</h1>
-        <p class="role">Студент / Учасник програми SoftServe</p>
-        <p class="role">НТУ "Дніпровська політехніка"</p>
+            <div class="profile-section">
+                <h2>Про мене</h2>
+                <p>
+                    Вітаю! Я студент та розробник, який спеціалізується на створенні веб-додатків і ботів. Мені подобається розбиратися в тому, як усе влаштовано: від розробки вебсайтів до створення ботів для Discord та Telegram на замовлення.
+                </p>
+                <p>
+                    Я завжди відкритий до нових викликів, чи то участь у різних програмах/конкурсах, виступах на різні теми, чи то вивчення іноземних мов. Прагну створювати не лише цікаві, а й практичні рішення, поєднуючи написання коду з роботою над собою.
+                </p>
+            </div>
 
-        <h2>Про мене</h2>
-        <p>Вітаю! Я студент та розробник, який спеціалізується на створенні веб-додатків і ботів. ні подобається розбиратися в тому, як усе влаштовано: від розробки вебсайтів до створення ботів для Discord та Telegram на замовлення.
+            <div class="profile-grid">
+                <article>
+                    <h3>Що я зараз розробляю та вивчаю</h3>
+                    <ul>
+                        <li>Python (FastAPI, Disnake), Golang</li>
+                        <li>Вивчаю C# та екосистему .NET</li>
+                        <li>Адмініструю Discord сервери</li>
+                        <li>Вивчаю англійську та іврит</li>
+                    </ul>
+                </article>
+                <article>
+                    <h3>Мої інтереси поза кодом</h3>
+                    <ul>
+                        <li>Відеоігри</li>
+                        <li>Бадмінтон, велоспорт</li>
+                        <li>Читання манги, веб-новел</li>
+                    </ul>
+                </article>
+            </div>
 
-        Я завжди відкритий до нових викликів, чи то участь у різних програмах/конкурсах, виступах на різні теми, чи то вивчення іноземних мов. Прагну створювати не лише цікаві, а й практичні рішення, поєднуючи написання коду з роботою над собою.</p>
-
-        <h2>Що я зараз розробляю та вивчаю</h2>
-        <ul>
-            <li>Python (FastAPI, Disnake), Golang</li>
-            <li>Вивчаю C# та екосистему .NET</li>
-            <li>Адмініструю Discord сервери</li>
-            <li>Вивчаю англійську та іврит</li>
-        </ul>
-
-        <h2>Мої інтереси поза кодом</h2>
-        <ul>
-            <li>Відеоігри</li>
-            <li>Бадмінтон, велоспорт</li>
-            <li>Читання манги, веб-новел</li>
-        </ul>
-
-        <a href="../index.html" class="back-link">⬅ Повернутися до команди</a>
-    </div>
-
+            <a href="../index.html" class="back-link">⬅ Повернутися до команди</a>
+        </section>
+    </main>
+    
+    <script src="../theme-switcher.js"></script>
 </body>
 
 </html>

@@ -8,6 +8,16 @@
     --shadow: 0 18px 50px rgba(44, 70, 114, 0.08);
 }
 
+:root[data-theme="dark"] {
+    --bg: #0f1419;
+    --surface: #1e242f;
+    --text: #e9f1ff;
+    --muted: #a0aab5;
+    --primary: #5ba3ff;
+    --primary-soft: #1a2850;
+    --shadow: 0 18px 50px rgba(0, 0, 0, 0.3);
+}
+
 * {
     box-sizing: border-box;
 }
@@ -18,6 +28,7 @@ body {
     background-color: var(--bg);
     color: var(--text);
     min-height: 100vh;
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .site-header {
@@ -83,6 +94,30 @@ body {
     width: 100%;
 }
 
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    border: none;
+    background: var(--primary-soft);
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    color: var(--primary);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+    background-color: rgba(76, 140, 255, 0.2);
+}
+
+.theme-toggle:active {
+    transform: scale(0.95);
+}
+
 .page-content {
     max-width: 980px;
     margin: 0 auto;
@@ -94,6 +129,7 @@ body {
     border-radius: 28px;
     padding: 36px;
     box-shadow: var(--shadow);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .profile-intro {
@@ -111,6 +147,11 @@ body {
     object-fit: cover;
     border: 4px solid var(--primary-soft);
     box-shadow: 0 18px 30px rgba(44, 70, 114, 0.12);
+    transition: box-shadow 0.3s ease;
+}
+
+:root[data-theme="dark"] .avatar {
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.3);
 }
 
 .profile-summary {
@@ -130,7 +171,8 @@ h1 {
     margin: 0;
     font-size: clamp(2rem, 3vw, 2.8rem);
     line-height: 1.05;
-    color: #2e3a4a;
+    color: var(--primary);
+    transition: color 0.3s ease;
 }
 
 .role {
@@ -145,7 +187,8 @@ h1 {
 .profile-section h2 {
     margin: 0 0 18px;
     font-size: 1.65rem;
-    color: #245fbd;
+    color: var(--primary);
+    transition: color 0.3s ease;
 }
 
 .profile-section p {
@@ -166,13 +209,20 @@ h1 {
     border-radius: 28px;
     padding: 24px;
     border: 1px solid rgba(76, 140, 255, 0.15);
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+:root[data-theme="dark"] .profile-grid article {
+    background-color: #252d3a;
+    border: 1px solid rgba(91, 163, 255, 0.2);
 }
 
 .profile-grid h3 {
     margin-top: 0;
     margin-bottom: 14px;
-    color: #2e3a4a;
+    color: var(--text);
     font-size: 1.3rem;
+    transition: color 0.3s ease;
 }
 
 .profile-grid ul {
@@ -208,4 +258,13 @@ h1 {
 
 .back-link:hover {
     color: #346ed1;
+}
+
+/* Dark theme specific styles */
+:root[data-theme="dark"] .site-header {
+    background: rgba(15, 20, 25, 0.96);
+}
+
+:root[data-theme="dark"] .back-link:hover {
+    color: #7b9fff;
 }
