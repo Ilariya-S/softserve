@@ -1,0 +1,40 @@
+name: Check Index and Update README
+
+on:
+  workflow_dispatch:
+
+jobs:
+  verify-and-update:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout current branch
+        uses: actions/checkout@v4
+        with:
+          persist-credentials: true
+          fetch-depth: 0 # Потрібно, щоб бачити всі гілки для перемикання
+
+      - name: Run check script
+        run: |
+          chmod +x check_index.sh
+          ./check_index.sh
+
+      - name: Commit to master branch
+        if: success()
+        run: |
+          git config --global user.name "github-actions[bot]"
+          git config --global user.email "github-actions[bot]@users.noreply.github.com"
+          
+          # Отримуємо назву поточної гілки
+          CURRENT_BRANCH=$(echo ${GITHUB_REF#refs/heads/})
+          
+          # Перемикаємось на master
+          git checkout master
+          
+          # Додаємо запис у README.md
+          echo -e "\n${CURRENT_BRANCH} | Файл index.html наявний | ✅" >> README.md
+          
+          git add README.md
+          git commit -m "Update README from branch ${CURRENT_BRANCH}"
+          git push origin master
+        env:
+          GITHUB_TOKEN: ${{ secrets.SOFTSERVE_TASK_SECRET }}
